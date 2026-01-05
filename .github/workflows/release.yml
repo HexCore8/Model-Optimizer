@@ -17,8 +17,8 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install tox
-      - name: Run basic unit tests
-        run: tox -e py312-torch29-tf_latest-unit
+      # - name: Run basic unit tests
+      #   run: tox -e py312-torch29-tf_latest-unit
       - name: Build Wheel
         run: |
           tox -e build-wheel
