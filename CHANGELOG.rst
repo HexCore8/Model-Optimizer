@@ -4,6 +4,10 @@ NVIDIA Model Optimizer Changelog (Linux)
 0.43 (2026-03-xx)
 ^^^^^^^^^^^^^^^^^
 
+**Bug Fixes**
+
+- ONNX Runtime dependency upgraded to 1.24 to solve missing graph outputs when using the TensorRT Execution Provider.
+
 **New Features**
 
 - User does not need to manually register MOE modules to cover experts calibration coverage in PTQ workflow.
