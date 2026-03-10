@@ -131,7 +131,7 @@ def run_autotune() -> int:
         - 1: Autotuning failed (exception occurred)
         - 130: Interrupted by user (Ctrl+C)
     """
-    args = _get_autotune_parser().parse_args()
+    args = get_parser().parse_args()
     apply_mode_presets(args)
     model_path = validate_file_path(args.onnx_path, "Model file")
     validate_file_path(args.qdq_baseline, "QDQ baseline model")
@@ -197,8 +197,11 @@ def run_autotune() -> int:
         return 1
 
 
-def _get_autotune_parser() -> argparse.ArgumentParser:
-    """Create and configure the command-line argument parser."""
+def get_parser() -> argparse.ArgumentParser:
+    """Create and return the autotune CLI argument parser.
+
+    Intended for Sphinx documentation and programmatic use (e.g. subparsers).
+    """
     parser = argparse.ArgumentParser(
         prog="modelopt.onnx.quantization.autotune",
         description="ONNX Q/DQ Autotuning with TensorRT",
