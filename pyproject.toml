@@ -47,6 +47,8 @@ dependencies = [
     "rich",
     "safetensors",
     "scipy",
+    "PyYAML>=6.0",
+    "omegaconf>=2.3.0"
 ]
 
 [project.optional-dependencies]
@@ -122,6 +124,7 @@ include = ["modelopt*"]
 
 [tool.setuptools.package-data]
 modelopt = ["**/*.h", "**/*.cpp", "**/*.cu"]
+modelopt_recipes = ["**/*.yml", "**/*.yaml"]
 
 [tool.uv]
 managed = true
