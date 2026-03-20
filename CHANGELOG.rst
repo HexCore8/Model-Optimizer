@@ -1,7 +1,18 @@
 NVIDIA Model Optimizer Changelog
 ================================
 
-0.43 (2026-03-xx)
+0.44 (2026-05-xx)
+^^^^^^^^^^^^^^^^^
+
+**New Features**
+
+- Support full Transformer Engine spec for Minitron pruning (``mcore_minitron``). Now we no longer need to use custom ModelOpt spec. Note that this does not affect the usage of the pruning workflow but makes pruning slightly faster and may result in slightly different pruned model because of different kernel and numerics.
+
+**Bug Fixes**
+
+- Fix Minitron pruning (``mcore_minitron``) for MoE models. Importance estimation hooks were incorrectly registered for MoE modules and NAS step was hanging before this.
+
+0.43 (2026-04-09)
 ^^^^^^^^^^^^^^^^^
 
 **Bug Fixes**
@@ -40,7 +51,7 @@ NVIDIA Model Optimizer Changelog
 - Migrated project metadata from ``setup.py`` to a fully declarative ``pyproject.toml``.
 - Enable experimental Python 3.13 wheel support and unit tests in CI/CD.
 
-0.42 (2026-02-xx)
+0.42 (2026-03-10)
 ^^^^^^^^^^^^^^^^^
 
 **Bug Fixes**
