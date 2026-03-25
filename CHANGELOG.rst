@@ -49,6 +49,7 @@ NVIDIA Model Optimizer Changelog
 
 **Deprecations**
 
+- Removed MT-Bench (FastChat) support from ``examples/llm_eval``. The ``run_fastchat.sh`` and ``gen_model_answer.py`` scripts have been deleted, and the ``mtbench`` task has been removed from the ``llm_ptq`` example scripts.
 - Remove deprecated NeMo-2.0 Framework references.
 
 **Misc**
